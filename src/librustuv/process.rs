@@ -229,6 +229,7 @@ impl RtioProcess for Process {
         }
 
         // FIXME(#10109): this is wrong
+        uverrln!("{:?} {:?}", self.exit_status, self.term_signal);
         self.exit_status.unwrap()
     }
 }
